@@ -1,3 +1,5 @@
+> **English** | [Kriolu](./README.kea.md)
+
 # papia-presets
 
 Community-curated glossary presets for [Skrebe](https://papia.studio), the Markdown translation editor for Cabo Verde Kriolu (ALUPEC).
@@ -39,7 +41,7 @@ index.json             ← auto-generated; do not edit by hand
 
 ## License
 
-All presets in this repository are licensed under [CC BY-SA 4.0](./LICENSE). Contributors retain authorship; downstream users must credit the original contributors and share derivative works under the same license.
+All presets and documentation in this repository are licensed under [CC BY-SA 4.0](./LICENSE). Contributors retain authorship; downstream users must credit the original contributors and share derivative works under the same license.
 
 By submitting a pull request you agree to release your contribution under CC BY-SA 4.0.
 

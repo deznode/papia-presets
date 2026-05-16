@@ -1,3 +1,5 @@
+> **English** | [Kriolu](./README.kea.md)
+
 # _example — Scaffold reference (NOT a real preset)
 
 This directory exists to show contributors what the file layout looks like. The leading underscore tells the build script to **skip this preset** when generating the catalog — it will never appear in Skrebe's marketplace.

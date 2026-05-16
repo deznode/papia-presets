@@ -5,6 +5,8 @@ title: '[Request] '
 labels: ['preset-request']
 ---
 
+> **English** | [Kriolu](./preset-request.kea.md)
+
 ## Preset request
 
 **Proposed domain:** <e.g. health / agriculture / music / ...>

@@ -1,3 +1,5 @@
+> **English** | [Kriolu](./CONTRIBUTING.kea.md)
+
 # Contributing a preset
 
 Thank you for wanting to help build the Kriolu glossary commons. This guide walks you through the entire flow, from idea to merged preset.
@@ -100,6 +102,14 @@ A red run prints exactly what's wrong and where. Fix and re-run until green.
    ```
 
 2. Open a pull request. Use the **"New preset"** template — it asks for the domain, sources, and dialect coverage. Filling it out completely speeds up review.
+
+   **Selecting a PR template:** GitHub does not show a PR-template picker when multiple templates exist. To use a specific template, append `?template=<filename>.md` to the PR-creation URL. Example for a new preset:
+
+   ```
+   https://github.com/deznode/papia-presets/compare/main...your-branch?template=new-preset.md
+   ```
+
+   For updates, use `update-preset.md`. Kriolu versions are also available: `new-preset.kea.md` / `update-preset.kea.md`.
 
 3. CI runs automatically (~1 minute). Watch the checks panel:
    - **Schema validation** — file shapes are correct

@@ -3,6 +3,8 @@ name: Update preset
 about: Update an existing preset (new entries, fixes, clarifications)
 ---
 
+> **English** | [Kriolu](./update-preset.kea.md)
+
 ## Update preset
 
 **Preset ID:** `<preset-id>`

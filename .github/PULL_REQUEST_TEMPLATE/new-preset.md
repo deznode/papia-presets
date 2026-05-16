@@ -3,6 +3,8 @@ name: New preset
 about: Submit a new glossary preset to the catalog
 ---
 
+> **English** | [Kriolu](./new-preset.kea.md)
+
 ## New preset
 
 **Preset ID:** `<your-preset-id>`
