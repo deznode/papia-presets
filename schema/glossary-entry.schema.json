@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/deznode/papia-presets/main/schema/glossary-entry.schema.json",
+  "title": "Glossary File",
+  "description": "The glossary.json file for a single preset. Shape mirrors Skrebe's .glossary.json export so files can round-trip without conversion.",
+  "type": "object",
+  "required": ["schemaVersion", "entries"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "const": 1
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/glossaryEntry" }
+    }
+  },
+  "$defs": {
+    "glossaryEntry": {
+      "type": "object",
+      "required": ["source", "targets", "policy"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "description": "Optional stable identifier. If omitted, the installer generates one."
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "description": "Source-language term or phrase. Used as the merge key — must be unique within a preset."
+        },
+        "targets": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["term"],
+            "additionalProperties": false,
+            "properties": {
+              "term": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200,
+                "description": "A target-language translation."
+              },
+              "preferred": {
+                "type": "boolean",
+                "description": "Mark exactly one target as preferred. When omitted, the first target is treated as preferred."
+              },
+              "dialect": {
+                "type": "string",
+                "enum": ["santiago", "sao-vicente", "fogo", "santo-antao", "brava", "maio", "boavista", "sal"],
+                "description": "Dialect this specific target belongs to. Use when the same source has different preferred terms by dialect."
+              },
+              "register": {
+                "type": "string",
+                "enum": ["formal", "neutral", "informal", "slang"],
+                "description": "Optional register classification."
+              }
+            }
+          }
+        },
+        "policy": {
+          "type": "string",
+          "enum": ["must", "should", "avoid"],
+          "description": "Enforcement level. 'must' = always use one of the targets. 'should' = preferred but not mandatory. 'avoid' = never use any of the targets (forbidden-terms list)."
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 1000,
+          "description": "Free-form context: when to use, audience considerations, examples."
+        },
+        "partOfSpeech": {
+          "type": "string",
+          "enum": ["noun", "verb", "adjective", "adverb", "preposition", "pronoun", "conjunction", "interjection", "phrase", "abbreviation"],
+          "description": "Optional part-of-speech tag."
+        },
+        "context": {
+          "type": "string",
+          "maxLength": 500,
+          "description": "Example sentence or usage context."
+        }
+      }
+    }
+  }
+}

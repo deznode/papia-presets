@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "source": "example term",
+      "targets": [
+        { "term": "termu di izenplu", "preferred": true }
+      ],
+      "policy": "should",
+      "notes": "Placeholder entry. Replace with a real term from your domain. The 'should' policy means the target is preferred but not mandatory.",
+      "partOfSpeech": "noun"
+    },
+    {
+      "source": "mandatory term",
+      "targets": [
+        { "term": "termu obrigatóriu", "preferred": true, "dialect": "santiago" }
+      ],
+      "policy": "must",
+      "notes": "The 'must' policy means at least one of the listed targets must be used when translating this source term. Skrebe will flag it as an error otherwise.",
+      "partOfSpeech": "noun"
+    },
+    {
+      "source": "forbidden term",
+      "targets": [
+        { "term": "termu pruibidu" }
+      ],
+      "policy": "avoid",
+      "notes": "The 'avoid' policy is the forbidden-terms list. Skrebe will flag the target term if it appears in a translation, suggesting alternatives. Use for terms you want translators NOT to use.",
+      "partOfSpeech": "noun"
+    }
+  ]
+}

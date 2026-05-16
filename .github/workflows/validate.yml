@@ -1,0 +1,102 @@
+name: Validate presets
+
+on:
+  pull_request:
+    paths:
+      - 'presets/**'
+      - 'schema/**'
+      - 'scripts/**'
+      - 'package.json'
+      - '.github/workflows/validate.yml'
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # need git history for version-bump check
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile=false
+
+      - name: Detect changed presets
+        id: changed
+        run: |
+          # Find preset IDs touched in this PR
+          CHANGED=$(git diff --name-only origin/${{ github.base_ref }}...HEAD \
+            | grep -oP 'presets/\K[^/]+' \
+            | grep -v '^_' \
+            | sort -u \
+            | tr '\n' ' ')
+          echo "presets=$CHANGED" >> "$GITHUB_OUTPUT"
+          echo "Changed presets: $CHANGED"
+
+      - name: Validate changed presets
+        if: steps.changed.outputs.presets != ''
+        run: |
+          for preset in ${{ steps.changed.outputs.presets }}; do
+            echo "::group::Validating $preset"
+            pnpm validate "$preset"
+            echo "::endgroup::"
+          done
+
+      - name: Validate ALL presets (sanity check)
+        run: pnpm validate:all
+
+      - name: Version bump check
+        if: steps.changed.outputs.presets != ''
+        run: |
+          # For each changed preset, ensure version was bumped vs. main
+          FAILED=0
+          for preset in ${{ steps.changed.outputs.presets }}; do
+            MANIFEST="presets/$preset/manifest.json"
+
+            # Skip if the preset is brand new (didn't exist on main)
+            if ! git cat-file -e "origin/${{ github.base_ref }}:$MANIFEST" 2>/dev/null; then
+              echo "✓ $preset: new preset, no version-bump check needed"
+              continue
+            fi
+
+            OLD_VERSION=$(git show "origin/${{ github.base_ref }}:$MANIFEST" | jq -r .version)
+            NEW_VERSION=$(jq -r .version "$MANIFEST")
+
+            # Check if any preset file changed (manifest, glossary, README, CHANGELOG)
+            if git diff --quiet "origin/${{ github.base_ref }}...HEAD" -- "presets/$preset/"; then
+              echo "✓ $preset: no content changes"
+              continue
+            fi
+
+            if [ "$OLD_VERSION" = "$NEW_VERSION" ]; then
+              echo "::error file=$MANIFEST::$preset: content changed but version is still $NEW_VERSION. Bump it per semver."
+              FAILED=1
+            else
+              echo "✓ $preset: $OLD_VERSION → $NEW_VERSION"
+            fi
+          done
+          exit $FAILED
+
+      # ALUPEC orthography lint runs against @papia/text-core.
+      # Wire this in once text-core is published to npm (or vendored here).
+      # For now, the inline placeholder ensures the job slot exists in CI history.
+      - name: ALUPEC orthography lint (placeholder)
+        run: |
+          echo "TODO: integrate @papia/text-core ALUPECLinter to check target terms."
+          echo "When enabled, this step sets manifest.alupecValidated = true on PR comment."

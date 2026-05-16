@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "_example",
+  "name": "Example Preset (Scaffold Reference)",
+  "nameKriolu": "Izenplu",
+  "description": "Scaffold reference showing the file layout and manifest fields. Not loaded into the catalog. Delete and replace with your own preset.",
+  "domain": "general",
+  "version": "0.0.1",
+  "license": "CC-BY-SA-4.0",
+  "entryCount": 3,
+  "dialects": ["santiago"],
+  "sourceLanguage": "en",
+  "targetLanguage": "kea",
+  "authors": [
+    { "name": "Papia Studio", "github": "@deznode" }
+  ],
+  "maintainers": ["@deznode"],
+  "sources": [
+    "Scaffold example — entries are placeholders and should be replaced with content from authoritative sources before publication."
+  ],
+  "createdAt": "2026-05-15",
+  "updatedAt": "2026-05-15",
+  "tags": ["example", "scaffold"]
+}
