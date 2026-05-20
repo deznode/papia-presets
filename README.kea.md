@@ -43,9 +43,9 @@ index.json             ← otu-geradu; ka edita-l a mon
 
 ## Lisensia
 
-Tudu presetis i dokumentason na es repo sta lisensiadu sob [CC BY-SA 4.0](./LICENSE). Kontributoris ta manten autoria; uzuárius downstream debe da kreditu a kontributoris orijinal i partilha trabadjus derivadu sob mesmu lisensia.
+Tudu presets i dokumentasan na es repo sta lisensiadu sob [Lisensia MIT](./LICENSE). Bu ten libradadi pa uza, modifika, i redistribui konteúdu — te na produtus komersial i di kódigu fitchadu — ku atribuisan sima Lisensia MIT ta izixi.
 
-Kantu bu submeti un pull request, bu ta konkorda libra bu kontribuison sob CC BY-SA 4.0.
+Kantu bu submete un pull request, bu ta konkorda publika bu kontribuisan ku Lisensia MIT.
 
 ## Governason
 

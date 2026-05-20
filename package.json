@@ -4,7 +4,7 @@
   "private": true,
   "description": "Community-curated glossary presets for Skrebe (Cabo Verde Kriolu translation editor).",
   "type": "module",
-  "license": "CC-BY-SA-4.0",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/deznode/papia-presets.git"

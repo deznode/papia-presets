@@ -43,4 +43,4 @@ about: Submete un preset novu di glosáriu pa katalogu
 - [ ] Kada entrada ten polmenus un alvu
 - [ ] `manifest.sources` ta lista polmenus un referensia kredíbel
 - [ ] N lê i N konkorda ku [CONTRIBUTING.kea.md](../../CONTRIBUTING.kea.md)
-- [ ] N ta libra es kontribuison sob [CC BY-SA 4.0](../../LICENSE)
+- [ ] N sta publika es kontribuison sob [Lisensia MIT](../../LICENSE)

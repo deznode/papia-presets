@@ -41,4 +41,4 @@ about: Submit a new glossary preset to the catalog
 - [ ] Every entry has at least one target
 - [ ] `manifest.sources` lists at least one credible reference
 - [ ] I have read and agree to [CONTRIBUTING.md](../../CONTRIBUTING.md)
-- [ ] I release this contribution under [CC BY-SA 4.0](../../LICENSE)
+- [ ] I release this contribution under the [MIT License](../../LICENSE)

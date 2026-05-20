@@ -6,7 +6,7 @@
   "description": "Scaffold reference showing the file layout and manifest fields. Not loaded into the catalog. Delete and replace with your own preset.",
   "domain": "general",
   "version": "0.0.1",
-  "license": "CC-BY-SA-4.0",
+  "license": "MIT",
   "entryCount": 3,
   "dialects": ["santiago"],
   "sourceLanguage": "en",

@@ -78,8 +78,8 @@
     },
     "license": {
       "type": "string",
-      "enum": ["CC-BY-SA-4.0"],
-      "description": "All presets in this catalog use CC BY-SA 4.0."
+      "enum": ["MIT"],
+      "description": "All presets in this catalog use the MIT License."
     },
     "entryCount": {
       "type": "integer",

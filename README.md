@@ -41,9 +41,9 @@ index.json             ← auto-generated; do not edit by hand
 
 ## License
 
-All presets and documentation in this repository are licensed under [CC BY-SA 4.0](./LICENSE). Contributors retain authorship; downstream users must credit the original contributors and share derivative works under the same license.
+All presets and documentation in this repository are licensed under the [MIT License](./LICENSE). You're free to use, modify, and redistribute the content — including in commercial and closed-source products — with attribution as the MIT license requires.
 
-By submitting a pull request you agree to release your contribution under CC BY-SA 4.0.
+By submitting a pull request you agree to release your contribution under the MIT License.
 
 ## Governance
 
