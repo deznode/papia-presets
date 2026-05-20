@@ -1,0 +1,8 @@
+{
+  "import": [
+    "@papia/cspell-kea/cspell-ext.json"
+  ],
+  "dictionaries": [
+    "kea"
+  ]
+}
