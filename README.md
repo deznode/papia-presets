@@ -39,6 +39,30 @@ scripts/               ← validate, build-index, new-preset
 index.json             ← auto-generated; do not edit by hand
 ```
 
+## Local smoke testing against Skrebe
+
+`scripts/build-index.ts` hardcodes the per-preset `manifestUrl` and `glossaryUrl`
+in `index.json` to `https://raw.githubusercontent.com/deznode/papia-presets/main/...`.
+That means pointing Skrebe at a locally-served `index.json` still sends it to
+GitHub for the manifest and glossary — which defeats the point of testing
+unmerged changes.
+
+Current workaround:
+
+1. `npx http-server . -p 8765 --cors -c-1 -s`
+2. Copy `index.json` to `tmp-local-index.json` and hand-rewrite the GitHub raw
+   URLs to `http://localhost:8765/...`. (`tmp-local-index.json` is gitignored.)
+3. In Skrebe → Settings → Advanced, set the custom catalog URL to
+   `http://localhost:8765/tmp-local-index.json`.
+
+### TODO: `--base-url` flag for `build-index`
+
+Replace the manual `tmp-local-index.json` step with
+`pnpm build-index --base-url http://localhost:8765`, which writes the same
+`index.json` but with every URL rooted at the given base. Five-line change in
+`scripts/build-index.ts:22`. Worth doing the next time someone smoke-tests
+the install flow or a second preset author needs a local dev loop.
+
 ## License
 
 All presets and documentation in this repository are licensed under the [MIT License](./LICENSE). You're free to use, modify, and redistribute the content — including in commercial and closed-source products — with attribution as the MIT license requires.
