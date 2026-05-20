@@ -1,0 +1,53 @@
+name: Publish catalog index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'presets/**/manifest.json'
+      - 'scripts/build-index.ts'
+      - 'package.json'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    name: Regenerate index.json
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: 9
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile=false
+
+      - name: Rebuild index
+        run: pnpm build-index
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet index.json; then
+            echo "index.json unchanged — nothing to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.json
+          git commit -m "chore: regenerate index.json [skip ci]"
+          git push

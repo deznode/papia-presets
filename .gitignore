@@ -1,0 +1,13 @@
+node_modules/
+.DS_Store
+*.log
+dist/
+.env
+.env.local
+.idea/
+.vscode/
+*.swp
+
+# Use pnpm only — npm/yarn lockfiles are accidental
+package-lock.json
+yarn.lock

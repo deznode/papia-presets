@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/deznode/papia-presets/main/schema/preset-manifest.schema.json",
+  "title": "Preset Manifest",
+  "description": "Metadata for a single glossary preset in the papia-presets catalog.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "id",
+    "name",
+    "description",
+    "domain",
+    "version",
+    "license",
+    "entryCount",
+    "sourceLanguage",
+    "targetLanguage",
+    "authors",
+    "createdAt",
+    "updatedAt"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "const": 1,
+      "description": "Schema version. Currently always 1."
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "minLength": 2,
+      "maxLength": 64,
+      "description": "URL-safe identifier. Must match the preset's directory name."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 80,
+      "description": "Human-readable name shown in the marketplace UI."
+    },
+    "nameKriolu": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 80,
+      "description": "Optional Kriolu translation of the name, used when the marketplace is shown in Kriolu."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 500,
+      "description": "One-paragraph summary of what this preset covers and who it's for."
+    },
+    "domain": {
+      "type": "string",
+      "enum": [
+        "health",
+        "education",
+        "civic-government",
+        "religion",
+        "tech",
+        "agriculture",
+        "legal",
+        "business",
+        "music",
+        "sports",
+        "media",
+        "tourism",
+        "general",
+        "other"
+      ],
+      "description": "Top-level domain category. Use 'other' for niche domains and explain in the description."
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Semver version. Bump on every update."
+    },
+    "license": {
+      "type": "string",
+      "enum": ["MIT"],
+      "description": "All presets in this catalog use the MIT License."
+    },
+    "entryCount": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Number of entries in glossary.json. Must match exactly — CI verifies."
+    },
+    "dialects": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["santiago", "sao-vicente", "fogo", "santo-antao", "brava", "maio", "boavista", "sal", "mixed"]
+      },
+      "uniqueItems": true,
+      "description": "Dialects represented in the preset. Use 'mixed' only if entries draw from multiple dialects without a dominant one."
+    },
+    "sourceLanguage": {
+      "type": "string",
+      "enum": ["en", "pt"],
+      "description": "ISO 639-1 code of the source language for entries."
+    },
+    "targetLanguage": {
+      "type": "string",
+      "enum": ["kea"],
+      "description": "ISO 639-3 code of the target language. Currently only 'kea' (Cabo Verdean Kriolu)."
+    },
+    "authors": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string", "minLength": 1, "maxLength": 120 },
+          "github": { "type": "string", "pattern": "^@?[a-zA-Z0-9-]+$" },
+          "email": { "type": "string", "format": "email" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      },
+      "description": "Authors credited for the preset content. Order signals lead authorship."
+    },
+    "maintainers": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^@[a-zA-Z0-9-]+$" },
+      "description": "GitHub handles authorized to merge updates without separate review."
+    },
+    "sources": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 5, "maxLength": 500 },
+      "minItems": 1,
+      "description": "Where the terminology comes from — published references, expert consultation, community review. Required."
+    },
+    "alupecValidated": {
+      "type": "boolean",
+      "description": "Set by CI, not the author. True when every target term passes the ALUPEC linter without errors."
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO date (YYYY-MM-DD) the preset was first created."
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO date (YYYY-MM-DD) of the latest update. Bump on every version change."
+    },
+    "minSkrebeVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Minimum Skrebe app version required to install this preset. Use when relying on a feature added in a specific release."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 2, "maxLength": 32 },
+      "maxItems": 10,
+      "description": "Optional free-form tags for search (e.g. 'patient-facing', 'clinical', 'pediatric')."
+    }
+  }
+}
