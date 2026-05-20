@@ -24,7 +24,7 @@ about: Atualiza un preset ki ja ta eziste (entradas novu, korreson, klarifikason
 
 ### Pamodi
 
-<Razon kurtu. Diretiva regulatóriu novu? Feedback di komunidadi panha un eru? Duminiu ekspansadu?>
+<Razon kurtu. Diretiva regulatóriu novu? Feedback di komunidadi panha un eru? Domain ekspansadu?>
 
 ### Fontis pa entradas novu/mudadu
 

@@ -11,7 +11,7 @@ about: Submete un preset novu di glosáriu pa katalogu
 
 **ID di preset:** `<bu-preset-id>`
 
-**Duminiu:** <saúdi / edukason / governu-siviku / relijaun / tek / agrikultura / legal / negósiu / múzika / disportu / midia / turismu / jeneral / otu>
+**Domain:** <saúdi / edukason / governu-siviku / relijaun / tek / agrikultura / legal / negósiu / múzika / disportu / midia / turismu / jeneral / otu>
 
 **Konta di entradas:** <númeru>
 
@@ -33,7 +33,7 @@ about: Submete un preset novu di glosáriu pa katalogu
 
 ### Kontestu di autor
 
-<Opsional ma útil: un ô dôs frasi sobri bu kontestu rilevanti. Bu é un peritu di duminiu? Faladô nativu? Tradutor ku spirénsia na es área? Es ta djuda maintainers a kalibra rivizon.>
+<Opsional ma útil: un ô dôs frasi sobri bu kontestu rilevanti. Bu é un peritu di domain? Faladô nativu? Tradutor ku spirénsia na es área? Es ta djuda maintainers a kalibra rivizon.>
 
 ### Checklist
 

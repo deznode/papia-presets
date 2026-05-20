@@ -4,17 +4,17 @@
 
 # papia-presets
 
-Presetis di glosáriu kuratoriadu pa komunidadi pa [Skrebe](https://papia.studio), editor di traduson markdown pa Kriolu di Kabu Verdi (ALUPEC).
+Presets di glosáriu pa [Skrebe](https://papia.studio), editor di tradusan markdown pa Kriolu di Kabu Verdi (ALUPEC).
 
-Kada preset é un vokabuláriu pikenu i fokadu na un duminiu spesífiku — saúdi, edukason, sirvisus sivikus, tekenolojia, relijaun, etc. Uzuárius di Skrebe ta navega na katalogu li dentu di aplikason, ta instala kes ki es ta meste, i ta resebe sujeston di termu i tcheku di konsistensia apropriadu pa duminiu, kantu sta tradusi.
+Kada preset é un vokabuláriu pikenu i fokadu na un domain spesífiku — saúdi, edukason, sirvisus sivikus, tekenolojia, relijaun, etc. Uzuárius di Skrebe ta navega na katalogu li dentu di aplikason, ta instala kes ki es ta meste, i ta resebe sujeston di termu i tcheku di konsistensia apropriadu pa domain, kantu sta tradusi.
 
 ## Navega katalogu
 
-Abri **Marketplace** na Skrebe. Lista ki bu ta odja ta ben di [`index.json`](./index.json) di es repo, regeradu otomatikamenti tudu bes ki un preset é adisionadu ô atualizadu.
+Abri **Marketplace** na Skrebe. Lista ki bu ta odja ta ben di [`index.json`](./index.json) di es repo, jeradu otomatikamenti tudu bes ki un preset é adisionadu ô atualizadu.
 
 ## Kontribui un preset
 
-Bu ka meste ser dezenvolvedor. Si bu sabe edita un folha di kálkulu i kore dôs komandu na terminal, bu pode kontribui. Guia kumpletu pasu-a-pasu: **[CONTRIBUTING.kea.md](./CONTRIBUTING.kea.md)**.
+Bu ka meste ser dezenvolvedor. Si bu sabe edita un un dokumento i kore dôs komandu na terminal, bu pode kontribui. Guia kumpletu pasu-a-pasu: **[CONTRIBUTING.kea.md](./CONTRIBUTING.kea.md)**.
 
 Verson kurtu:
 
@@ -32,7 +32,7 @@ Un maintainer ta reviza. CI ta verifika ortografia i strutura. Dipos di merge, b
 ```
 presets/
   <preset-id>/
-    manifest.json      ← metadatu (nomi, duminiu, verson, autoris, fontis)
+    manifest.json      ← metadatu (nomi, domain, verson, autoris, fontis)
     glossary.json      ← entradas di termu propi
     README.md          ← kontestu, públiku-alvu, notas di dialetu
     CHANGELOG.md       ← ke ki mudou na kada verson
@@ -56,5 +56,5 @@ Diskorda di un dizizon di kuradoria? Bu pode **faze fork di katalogu** i hospeda
 ## Perguntas
 
 - **Atxa un termu eradu?** Abri un issue na preset, ô manda un PR ku korreson.
-- **Kre un duminiu novu ki ka inda eziste?** Abri un [pididu di preset](./.github/ISSUE_TEMPLATE/preset-request.md) — alguen pode voluntaria pa autoria.
+- **Kre un domain novu ki ka inda eziste?** Abri un [pididu di preset](./.github/ISSUE_TEMPLATE/preset-request.md) — alguen pode voluntaria pa autoria.
 - **Sta konstrui ferramenta riba di es katalogu?** Schemas na [`schema/`](./schema) é kontratu stabel. Pin `schemaVersion: 1` i bu sta siguru.

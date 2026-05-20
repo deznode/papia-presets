@@ -1,6 +1,6 @@
 ---
 name: Pididu di preset (Kriolu)
-about: Pidi un duminiu novu ô preset ki ka inda eziste
+about: Pidi un domain novu ô preset ki ka inda eziste
 title: '[Pididu] '
 labels: ['preset-request']
 ---
@@ -11,7 +11,7 @@ labels: ['preset-request']
 
 ## Pididu di preset
 
-**Duminiu propostu:** <p.eg. saúdi / agrikultura / múzika / ...>
+**Domain propostu:** <p.eg. saúdi / agrikultura / múzika / ...>
 
 **ID di preset propostu:** <p.eg. `maritime-fishing`>
 

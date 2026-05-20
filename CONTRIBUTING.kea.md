@@ -16,7 +16,7 @@ Disidi três kuza:
 
 1. **Domain.** Kale kategoria ki bu preset ta kobri? Saúdi, edukasan, agrikultura, relijian, múzika, tek, sirvisus sivikus, etc. Mante-l strétu — un preset apertadu di 80 termu é midjor ki un di 800 termu spadjadu.
 2. **Públiku.** Ken ki ta uza es preset? Materiál pa pasienti ta lê diferenti di notas klínika; testu di skola ta diferensia di artigu akadémiku. Marka es informasan na README di bu preset.
-3. **Kobertura di dialetu.** Santiagu (Badiu)? São Vicente (Sanpajudu)? Tudu doz? Marka es informasan na manifest. Mistura dialetu sen sinaliza é problema mas komun na revizan.
+3. **Kobertura di dialetu.** Santiagu (Badiu)? São Vicente (Sanpajudu)? Tudu dôs? Marka es informasan na manifest. Mistura dialetu sen sinaliza é problema mas komun na revizan.
 
 Si bu domain ka eziste inda, ka ten problema — bai en frenti i kria-l.
 
@@ -103,7 +103,7 @@ Un kore vermedju ta imprimi izatamenti ke ki sta eradu i undi. Korejil i kore di
    git push origin add-health-basic
    ```
 
-2. Abri un pull request. Uza template **"New preset"** — el ta pidi duminiu, fontis, i kobertura di dialetu.
+2. Abri un pull request. Uza template **"New preset"** — el ta pidi domain, fontis, i kobertura di dialetu.
 
    **Skodje template Kriolu:** GitHub ka ta mostra un menu di template di PR automatikamenti te ki ten múltipu template. Pa uza versan Kriolu, adisiona `?template=new-preset.kea.md` na fin di URL di krian di PR. Ezemplu:
 
@@ -143,13 +143,13 @@ Dokumenta kada mudansa na `CHANGELOG.md` di preset.
 
 Un maintainer ta verifika:
 
-1. **Alkance é klaru.** Duminiu di preset sta ben defenidu i entradas ta kabe nel.
+1. **Alkance é klaru.** Domain di preset sta ben defenidu i entradas ta kabe nel.
 2. **Fontis é kredíbel.** Glosários governamental, materiál peer-reviewed, uzu komunitáriu stabelesedu, ô autoris peritu nomeadu. "Sensu komun" sô ka é fonti.
 3. **Konformidadi ku ALUPEC.** Termus alvu ta pasa linter (CI ta enforsa).
 4. **Onestidadi di dialetu.** Si entradas sta predominantimenti di un dialetu, manifest ta dize-l.
 5. **Sen duplikason ku presetis ki ja eziste.** Si bu entrada di "consent" ta kontradidi un na otu preset ki ja merged, nu ta diskuti kal é kanóniku ô si tudu dôs ta kueksisti ku alkance más klaru.
 
-Nu ka ta gatekeep na stilu ô kompletu. Un preset di 30 entradas fokadu pa un peritu di duminiu é más válidu ki 300 entradas di palpiti.
+Nu ka ta gatekeep na stilu ô kompletu. Un preset di 30 entradas fokadu pa un peritu di domain é más válidu ki 300 entradas di palpiti.
 
 ---
 
