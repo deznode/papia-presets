@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "skrebe-translator-workflow",
+  "name": "Skrebe Translator Workflow",
+  "description": "Core vocabulary a Skrebe user encounters while translating English into Kriolu: editor verbs (open, save, read, write), workflow nouns (document, word, sentence, project), the conjunctions that trip up Portuguese speakers (and, but, because, not, more), and second-person register distinctions. The catalog's seed preset.",
+  "domain": "tech",
+  "version": "0.1.0",
+  "license": "MIT",
+  "entryCount": 20,
+  "dialects": ["santiago"],
+  "sourceLanguage": "en",
+  "targetLanguage": "kea",
+  "authors": [
+    {
+      "name": "Papia Studio",
+      "github": "@deznode",
+      "url": "https://papia.studio"
+    }
+  ],
+  "maintainers": ["@deznode"],
+  "sources": [
+    "docs/glossary.md (deznode/papia-studio) — project-normative terminology for ALUPEC, Kriolu, dialect names, and ASR/TM concepts.",
+    "ADR-0013 (deznode/papia-studio) — canonical four-way 'and' conjunction design (ku / y / i / never-e).",
+    "Resolução n.º 48/2005 and Decreto-Lei n.º 67/98 — Cape Verde government ALUPEC orthography specifications.",
+    "Peace Corps Kriolu Dictionary — https://files.peacecorps.gov/multimedia/pdf/library/CV_Kriolu.pdf (general lexicon attestation).",
+    "Omniglot Cape Verdean Creole — https://www.omniglot.com/writing/caboverdean.htm (ALUPEC quick reference).",
+    "Gemini 2.5 Flash translation eval baseline (deznode/papia-studio, arkhe/eval/gemini-2.5-flash-baseline.json) — community-reviewed gold translations used for regression scoring."
+  ],
+  "createdAt": "2026-05-19",
+  "updatedAt": "2026-05-19",
+  "tags": ["seed", "translator-workflow", "computing", "conjunctions"]
+}
