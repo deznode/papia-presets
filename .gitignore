@@ -11,3 +11,4 @@ dist/
 # Use pnpm only — npm/yarn lockfiles are accidental
 package-lock.json
 yarn.lock
+tmp-local-index.json
