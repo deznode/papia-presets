@@ -1,0 +1,6 @@
+{
+  "import": ["@papia/cspell-kea/cspell-ext.json"],
+  "overrides": [
+    { "filename": "**/{*.kea,kea}.{md,mdx}", "dictionaries": ["kea"] }
+  ]
+}

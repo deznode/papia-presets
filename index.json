@@ -1,8 +1,41 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-20T03:00:26.849Z",
+  "generatedAt": "2026-05-20T14:38:50.031Z",
   "catalogName": "papia-presets",
   "catalogVersion": "0.1.0",
-  "domains": [],
-  "presets": []
+  "domains": [
+    "tech"
+  ],
+  "presets": [
+    {
+      "id": "skrebe-translator-workflow",
+      "name": "Skrebe Translator Workflow",
+      "description": "Core vocabulary a Skrebe user encounters while translating English into Kriolu: editor verbs (open, save, read, write), workflow nouns (document, word, sentence, project), the conjunctions that trip up Portuguese speakers (and, but, because, not, more), and second-person register distinctions. The catalog's seed preset.",
+      "domain": "tech",
+      "latestVersion": "0.1.0",
+      "entryCount": 20,
+      "dialects": [
+        "santiago"
+      ],
+      "sourceLanguage": "en",
+      "targetLanguage": "kea",
+      "authors": [
+        {
+          "name": "Papia Studio",
+          "github": "@deznode"
+        }
+      ],
+      "alupecValidated": false,
+      "featured": false,
+      "tags": [
+        "seed",
+        "translator-workflow",
+        "computing",
+        "conjunctions"
+      ],
+      "manifestUrl": "https://raw.githubusercontent.com/deznode/papia-presets/main/presets/skrebe-translator-workflow/manifest.json",
+      "glossaryUrl": "https://raw.githubusercontent.com/deznode/papia-presets/main/presets/skrebe-translator-workflow/glossary.json",
+      "updatedAt": "2026-05-19"
+    }
+  ]
 }

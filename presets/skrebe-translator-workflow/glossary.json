@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "source": "and",
+      "targets": [
+        { "term": "ku", "preferred": true },
+        { "term": "y" },
+        { "term": "i" }
+      ],
+      "policy": "must",
+      "partOfSpeech": "conjunction",
+      "notes": "Four-way choice. Use `ku` to coordinate noun phrases (e.g. \"Pandas ku NumPy\", \"pai ku mai\"). Use `y` (ALUPEC spec form per Decreto-Lei n.º 67/98) or `i` (community-accepted alternative) for clausal coordination (e.g. \"El ta lé i ta skrebi\"). NEVER use `e` — that is the copula \"is\" and flips meaning: \"Fásil di lé e skrebi\" misreads as \"easy to read IS write\". See ADR-0013."
+    },
+    {
+      "source": "but",
+      "targets": [
+        { "term": "ma", "preferred": true }
+      ],
+      "policy": "must",
+      "partOfSpeech": "conjunction",
+      "notes": "Kriolu \"but\" is `ma`, not `mas`. The unaccented `mas` is the comparative \"more\" (\"mas grandi ki kel\" = \"bigger than that\"). The accented `más` is Portuguese interference and never used in ALUPEC. Linter rule: ALUPEC_CALQUE_MAS."
+    },
+    {
+      "source": "ALUPEC",
+      "targets": [
+        { "term": "ALUPEC", "preferred": true }
+      ],
+      "policy": "must",
+      "partOfSpeech": "abbreviation",
+      "notes": "Preserve verbatim, uppercase. Stands for Alfabeto Unificado para a Escrita do Caboverdiano (Resolução n.º 48/2005). Do not translate, lowercase, or hyphenate."
+    },
+    {
+      "source": "Kriolu",
+      "targets": [
+        { "term": "Kriolu", "preferred": true },
+        { "term": "Kabuverdianu" }
+      ],
+      "policy": "must",
+      "partOfSpeech": "noun",
+      "notes": "Cape Verdean Creole, ISO 639-3 `kea`. Both `Kriolu` and `Kabuverdianu` are accepted endonyms. Do NOT use Portuguese `Crioulo` — even without the cedilla it carries PT orthography assumptions."
+    },
+    {
+      "source": "write",
+      "targets": [
+        { "term": "skrebi", "preferred": true }
+      ],
+      "policy": "should",
+      "partOfSpeech": "verb",
+      "notes": "The verb that gives Skrebe its name. ALUPEC starts with `sk-` (not `esc-`) and ends in `-i` (not Portuguese `-er`). Example: \"El ta skrebi tudu dia\" (\"He writes every day\")."
+    },
+    {
+      "source": "read",
+      "targets": [
+        { "term": "lé", "preferred": true }
+      ],
+      "policy": "should",
+      "partOfSpeech": "verb",
+      "notes": "The acute accent on the stressed vowel is mandatory. Pairs idiomatically with `skrebi`: \"Fásil di lé i skrebi\" (\"easy to read and write\"). Do not write the Portuguese infinitive `ler`."
+    },
+    {
+      "source": "open",
+      "targets": [
+        { "term": "abri", "preferred": true }
+      ],
+      "policy": "should",
+      "partOfSpeech": "verb",
+      "notes": "Standard verb in both general and UI senses (\"abri un dokumentu\" = \"open a document\"). Final `-i`, not Portuguese `-ir`."
+    },
+    {
+      "source": "save",
+      "targets": [
+        { "term": "guarda", "preferred": true }
+      ],
+      "policy": "should",
+      "partOfSpeech": "verb",
+      "notes": "Used for \"save\" in the software/UI sense. Peace Corps lists the core meaning as \"protect/keep\" — naturally extended to the file-save context. The alternative `salva` exists but reads more Portuguese. Community review encouraged."
+    },
+    {
+      "source": "close",
+      "targets": [
+        { "term": "fitxa", "preferred": true }
+      ],
+      "policy": "should",
+      "partOfSpeech": "verb",
+      "notes": "ALUPEC digraph `tx` (not `ch`). Peace Corps lists the primary sense as \"lock\"; the document-close sense is a natural extension. Example: \"Fitxa kel dokumentu\". Community review encouraged."
+    },
+    {
+      "source": "translate",
+      "targets": [
+        { "term": "traduzi", "preferred": true }
+      ],
+      "policy": "should",
+      "partOfSpeech": "verb",
+      "notes": "Kriolu drops the Portuguese infinitive ending: PT *traduzir* → Kr *traduzi*. Follows the same `-i` verb pattern as `skrebi`, `abri`, `parti`. Not directly attested in Peace Corps — bootstrap term, pending community review."
+    },
+    {
+      "source": "translation",
+      "targets": [
+        { "term": "tradusan", "preferred": true }
+      ],
+      "policy": "should",
+      "partOfSpeech": "noun",
+      "notes": "Bootstrap calque from PT *tradução* with ALUPEC mappings (`ç` → `s`, `ão` → `an`). Not directly attested — pending community review. Alternative forms `tradusu` and `tradusion` exist in informal usage."
+    },
+    {
+      "source": "document",
+      "targets": [
+        { "term": "dokumentu", "preferred": true }
+      ],
+      "policy": "should",
+      "partOfSpeech": "noun",
+      "notes": "Standard Portuguese cognate with ALUPEC mapping (`c` → `k`, final `-o` → `-u`). Used in the computing/UI sense for any text artifact (e.g. a Skrebe `.papia.json` bundle)."
+    },
+    {
+      "source": "word",
+      "targets": [
+        { "term": "palávra", "preferred": true }
+      ],
+      "policy": "should",
+      "partOfSpeech": "noun",
+      "notes": "Acute on the stressed vowel; directly attested in the Peace Corps wordlist. Used for linguistic units in editor UI (e.g. word count)."
+    },
+    {
+      "source": "sentence",
+      "targets": [
+        { "term": "frazi", "preferred": true }
+      ],
+      "policy": "should",
+      "partOfSpeech": "noun",
+      "notes": "Directly attested. Used by Skrebe's sentence-segmentation pipeline when surfaced in UI."
+    },
+    {
+      "source": "project",
+      "targets": [
+        { "term": "projektu", "preferred": true }
+      ],
+      "policy": "should",
+      "partOfSpeech": "noun",
+      "notes": "Directly attested. ALUPEC uses `k` (not Portuguese `c` or `-ct-`). Used for a Skrebe translation project or workspace."
+    },
+    {
+      "source": "help",
+      "targets": [
+        { "term": "djuda", "preferred": true }
+      ],
+      "policy": "should",
+      "partOfSpeech": "verb",
+      "notes": "ALUPEC digraph `dj-` (not Portuguese `j-`). Attested in the project eval baseline (\"Obrigadu pa djuda-m oji\" = \"thanks for helping me today\"). Works as both verb (\"to help\") and noun (\"help\"). Do NOT use the Portuguese-leaning `ajuda`."
+    },
+    {
+      "source": "you",
+      "targets": [
+        { "term": "bo", "preferred": true, "register": "neutral" },
+        { "term": "nhu", "register": "formal" },
+        { "term": "nha", "register": "formal" }
+      ],
+      "policy": "should",
+      "partOfSpeech": "pronoun",
+      "notes": "`bo` is the default 2nd-person singular. `nhu` (addressing a man) and `nha` (addressing a woman) are the respectful forms used with elders or in formal address. Avoid Portuguese `você` (Brazilian PT influence)."
+    },
+    {
+      "source": "because",
+      "targets": [
+        { "term": "porque" },
+        { "term": "porkê" }
+      ],
+      "policy": "avoid",
+      "partOfSpeech": "conjunction",
+      "notes": "Both forms are Portuguese interference. Use Kriolu `pamodi` or `pabia` instead. Enforced by linter rule ALUPEC_CALQUE_PORQUE. Example: \"N ka kre ba pamodi sa ta txobe\" (\"I don't want to go because it's raining\")."
+    },
+    {
+      "source": "not",
+      "targets": [
+        { "term": "não" },
+        { "term": "nao" }
+      ],
+      "policy": "avoid",
+      "partOfSpeech": "adverb",
+      "notes": "Both forms are Portuguese (the tilde in `não` is ALUPEC-forbidden anyway). Kriolu negation is `ka`, placed before the verb (\"N ka kre ba\" = \"I don't want to go\"). Enforced by linter rule ALUPEC_CALQUE_NAO."
+    },
+    {
+      "source": "more",
+      "targets": [
+        { "term": "más" }
+      ],
+      "policy": "avoid",
+      "partOfSpeech": "adverb",
+      "notes": "The accented `más` is Portuguese interference. Kriolu \"more\" is `mas` (unaccented): \"mas grandi ki kel\" = \"bigger than that\". Beware: this same `mas` is correct for \"more\" but NEVER for \"but\" — for \"but\" use `ma` (see the \"but\" entry)."
+    }
+  ]
+}
