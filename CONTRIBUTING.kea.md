@@ -4,9 +4,9 @@
 
 # Kontribui un preset
 
-Obrigadu pa kre djuda konstrui es komuns di glosáriu di Kriolu. Es guia ta leba-u pa tudu fluxu, di idea te preset merged.
+Obrigadu pa kre djuda konstrui es glosáriu komun di Kriolu. Es gia ta papia pa tudu fluxu, di idea te preset merged.
 
-Si algun kuza li ka sta klaru, é bug di nos — favor abri un issue i nu ta fixa dokumentu.
+Si algun kuza li ka sta klaru, é un bug di nos — purfavor abri un issue i nu ta koreji dokumentu.
 
 ---
 
@@ -14,11 +14,11 @@ Si algun kuza li ka sta klaru, é bug di nos — favor abri un issue i nu ta fix
 
 Disidi três kuza:
 
-1. **Duminiu.** Kal sentu ki bu preset ta kobri? Saúdi, edukason, agrikultura, relijaun, múzika, tek, sirvisus sivikus, etc. Mante-l strétu — un preset apertadu di 80 termu é midjor ki un di 800 termu spadjadu.
-2. **Públiku.** Ken ki ta uza es kuza? Materiál pa pasienti ta lê diferenti di notas klínika; tekstu di skola ta diferensia di artigu akadémiku. Marka es kuza na README di bu preset.
-3. **Kobertura di dialetu.** Santiagu (Badiu)? Sãu Visenti (Sanpajudu)? Tudu dôs? Marka es kuza na manifest. Mistura dialetu sen sinaliza é problema más kumun na rivizon.
+1. **Domain.** Kale kategoria ki bu preset ta kobri? Saúdi, edukasan, agrikultura, relijian, múzika, tek, sirvisus sivikus, etc. Mante-l strétu — un preset apertadu di 80 termu é midjor ki un di 800 termu spadjadu.
+2. **Públiku.** Ken ki ta uza es preset? Materiál pa pasienti ta lê diferenti di notas klínika; testu di skola ta diferensia di artigu akadémiku. Marka es informasan na README di bu preset.
+3. **Kobertura di dialetu.** Santiagu (Badiu)? São Vicente (Sanpajudu)? Tudu doz? Marka es informasan na manifest. Mistura dialetu sen sinaliza é problema mas komun na revizan.
 
-Si bu duminiu ka inda eziste, ka ten problema — bai en frenti i kria-l.
+Si bu domain ka eziste inda, ka ten problema — bai en frenti i kria-l.
 
 ---
 
@@ -32,22 +32,22 @@ cd papia-presets
 pnpm install
 ```
 
-É só si. Repo ka ten dipendénsia di runtime alén di un validador di JSON schema.
+É só kel. Repo ka ten dipendénsia di runtime alén di un validador di JSON schema.
 
 ---
 
 ## Fluxu di autoria
 
-### Opson A — Konstrui-l na Skrebe i esporta
+### Opsan A — Konstrui-l na Skrebe i exporta
 
-Es é di lonji kaminhu más fásil. É tanbé más konfiabel, pamodi linter ALUPEC di Skrebe ta panha errus di ortografia kantu bu sta skrebi.
+Keli e manera mas faxi. É tanbé más konfiavel, pamodi linter ALUPEC di Skrebe ta panha erus di ortografia kantu bu sta skrebe.
 
 1. Abri Skrebe, kria ô abri kualker dokumentu.
 2. Abri panel di Glosáriu. Adisiona bu termus un pa un, ô importa un CSV.
 3. Esporta komo `.glossary.json` (Panel di Glosáriu → Esporta → JSON).
-4. Poi fitxeru esportadu na `presets/<bu-preset-id>/glossary.json`.
+4. Poi fixeru exportadu na `presets/<bu-preset-id>/glossary.json`.
 
-### Opson B — Skrebe JSON diretamenti
+### Opsan B — Skrebe JSON diretamenti
 
 1. Kria un preset novu:
 
@@ -57,7 +57,7 @@ Es é di lonji kaminhu más fásil. É tanbé más konfiabel, pamodi linter ALUP
 
    Es ta kria `presets/health-basic/` ku stub di `manifest.json`, `glossary.json`, `README.md`, i `CHANGELOG.md`.
 
-2. Edita `manifest.json` — inxi nomi, diskrison, autoris, fontis. Odja [`schema/preset-manifest.schema.json`](./schema/preset-manifest.schema.json) pa kada kampu.
+2. Edita `manifest.json` — kompleta, nomi, diskrisan, autoris, fontis. Odja [`schema/preset-manifest.schema.json`](./schema/preset-manifest.schema.json) pa kada propriedadi.
 
 3. Edita `glossary.json` — adisiona bu entradas. Formatu sta dokumentadu na [`schema/glossary-entry.schema.json`](./schema/glossary-entry.schema.json). Entrada mínimu:
 
@@ -69,13 +69,13 @@ Es é di lonji kaminhu más fásil. É tanbé más konfiabel, pamodi linter ALUP
    }
    ```
 
-4. Atualiza `entryCount` di `manifest.json` pa korresponde a númeru di entradas.
+4. Atualiza `entryCount` di `manifest.json` pa korresponde ku númeru di entradas.
 
 ---
 
 ## Valida antis di submeti
 
-Kore validador lokalmenti — el ta panha mesmu kuzas ki CI, más rápidu.
+Kore validador lokalmenti — el ta panha omesmu kuzas ki CI, ma más rápidu.
 
 ```sh
 pnpm validate health-basic
@@ -83,12 +83,12 @@ pnpm validate health-basic
 
 Un kore verdi ta sinifika:
 
-- Anbus fitxeru ta parse i ta korresponde ku si schema
+- Anbus fixeru ta "parse" i ta korresponde ku ses schema
 - `entryCount` ta korresponde ku entradas reál
 - Sen termu `source` dupliku dentu di preset
-- Tudu kampu obrigatóriu di manifest sta prezenti
+- Tudu propriedadi obrigatóriu di manifest sta prezenti
 
-Un kore vermedju ta imprimi izatamenti ke ki sta eradu i undi. Fixa-l i kore di novu te bira verdi.
+Un kore vermedju ta imprimi izatamenti ke ki sta eradu i undi. Korejil i kore di novu ta bira verdi.
 
 ---
 
@@ -103,15 +103,15 @@ Un kore vermedju ta imprimi izatamenti ke ki sta eradu i undi. Fixa-l i kore di 
    git push origin add-health-basic
    ```
 
-2. Abri un pull request. Uza template **"New preset"** — el ta pidi duminiu, fontis, i kobertura di dialetu. Inxi-l kumpletu ta atrijinha rivizon.
+2. Abri un pull request. Uza template **"New preset"** — el ta pidi duminiu, fontis, i kobertura di dialetu.
 
-   **Skodje template Kriolu:** GitHub ka ta mostra un menu di template di PR otomatikamenti kantu ten múltipu template. Pa uza bersãu Kriolu, adisiona `?template=new-preset.kea.md` na fin di URL di kriason di PR. Ezemplu:
+   **Skodje template Kriolu:** GitHub ka ta mostra un menu di template di PR automatikamenti te ki ten múltipu template. Pa uza versan Kriolu, adisiona `?template=new-preset.kea.md` na fin di URL di krian di PR. Ezemplu:
 
    ```
    https://github.com/deznode/papia-presets/compare/main...bu-branch?template=new-preset.kea.md
    ```
 
-   Pa atualizason di preset, uza `update-preset.md` ô `update-preset.kea.md`.
+   Pa atualizasan di preset, uza `update-preset.md` ô `update-preset.kea.md`.
 
 3. CI ta kore otomatikamenti (~1 minutu). Odja painel di checks:
    - **Validason di schema** — formatu di fitxeru sta korretu
@@ -127,9 +127,9 @@ Un kore vermedju ta imprimi izatamenti ke ki sta eradu i undi. Fixa-l i kore di 
 
 ## Atualiza un preset ki ja ta eziste
 
-Maintainers di un preset sta listadu na si `manifest.json` sob `maintainers`. Es pode faze merge di atualizason sen un rivizon separadu. Otu kontributoris é mutu ben-vindu pa manda atualizason — só meste sign-off di un maintainer.
+Maintainers di un preset sta listadu na si `manifest.json` sob `maintainers`. Es pode faze merge di atualizasan sen un rivizon separadu. Otu kontributoris é mutu ben-vindu pa manda atualizasan — só meste sign-off di un maintainer.
 
-Kada atualizason **ten ki bumpa verson** na `manifest.json` siginu [semver](https://semver.org/):
+Kada atualizasan **ten ki bumpa verson** na `manifest.json` siginu [semver](https://semver.org/):
 
 - **Patch** (1.0.0 → 1.0.1) — korreson di tipo, klarifikason di notas
 - **Minor** (1.0.0 → 1.1.0) — entradas novu adisionadu, sen mudansa ki ta keba
@@ -155,10 +155,10 @@ Nu ka ta gatekeep na stilu ô kompletu. Un preset di 30 entradas fokadu pa un pe
 
 ## Kódigu di konduta
 
-Sé respetuoz na diskuson di PRs. Debati di terminolojia pode bira kenti — spesialmenti riba di skolha di dialetu, lingua relijozu, i vokabuláriu politikamenti sensível. Nu ta sumi boa fé i ta pidi tudu mundu ta faze mesmu. Ataki pesoal ô lingua dismisivu pa dialetu, rejion, ô kontributoris ta fexa PR.
+Ser respetozu na diskusan di PRs. Debati di terminolojia pode bira kenti — spesialmenti na skodje dialetu, lingua relijiozu, i vokabuláriu politikamenti sensível. Nu ta asumi boa fé i ta pidi tudu djenti pa faze mesmu. Si bu ta sinti ki un diskusan ta bira tóxiku, ô si bu ta sinti ki bu ta trata injustamenti, purfavor abri un issue i nu ta koreji situason.
 
 ---
 
 ## Perguntas
 
-Abri un issue, ô pergunta na thread di diskuson di un PR ki ja sta abertu. Maintainers ta responde kostumadamenti dentu di poku dia.
+Abri un issue, ô pergunta na thread di diskusan di un PR ki dja sta abertu. Maintainers ta responde kostumadamenti dentu di poku dia.

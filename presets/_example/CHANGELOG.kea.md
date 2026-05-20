@@ -4,11 +4,11 @@
 
 # Changelog — _example
 
-Tudu mudansa notável a es preset ta sta dokumentadu na es fitxeru. Formatu ta segui livrementi [Keep a Changelog](https://keepachangelog.com/). Bumpa verson na `manifest.json` siginu [semver](https://semver.org/):
+Tudu mudansa notável na es preset ta sta dokumentadu na es dokumentu. Formatu ta segui livrementi [Keep a Changelog](https://keepachangelog.com/). Troka versan na `manifest.json` siginu [semver](https://semver.org/):
 
-- **Patch** (1.0.0 → 1.0.1) — korreson di tipo, klarifikason di notas
-- **Minor** (1.0.0 → 1.1.0) — entradas novu adisionadu, sen mudansa ki ta keba
-- **Major** (1.0.0 → 2.0.0) — termus tiradu ô tradusãu preferida mudadu (ta keba aprovasãu downstream)
+- **Patch** (1.0.0 → 1.0.1) — korresan di tipo, klarifikasan di notas
+- **Minor** (1.0.0 → 1.1.0) — entradas novu adisionadu, sen mudansa ki ta kebra
+- **Major** (1.0.0 → 2.0.0) — termus tiradu ô tradusan preferido mudadu (ta kebra aprovan downstream)
 
 ---
 
@@ -16,4 +16,4 @@ Tudu mudansa notável a es preset ta sta dokumentadu na es fitxeru. Formatu ta s
 
 ### Added
 
-- Skafold inisial ku três entradas ilustrativu ki ta demonstra polítika `must`, `should`, i `avoid`.
+- Skafold inisial ku trêz entradas ilustrativu ki ta demonstra polítika `must`, `should`, i `avoid`.
